@@ -1,0 +1,13 @@
+An extensive editor with more features than any other XCOM2 editor around.
+Allows you to edit soldier AND enemy stats while in a tactical mission.
+Features a full soldier editor that allow resurrection of dead characters,
+renaming, upgrading of armour, modification of all stats, and even the
+ability to globally modify all of your soldiers at one time!  Also includes
+a very easy to use building editor that allows you to instantly create
+buildings at any of your bases and modify the costs/time/vulnerability
+of building types.  A weapons and ammo editor allows you to make weapons
+take 0 time units to fire or even require no ammo at all!  Allows you to
+import soldiers from XCOMI into your XCOMII saved game and more.  Many more
+features and even a safety option that will quickly make a backup of your
+saved games and then restore them if anything should go wrong.  Lots more
+features.  The best XCOM2 editor around!

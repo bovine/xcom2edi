@@ -1,0 +1,326 @@
+                       X-COM II Saved Game editor, v1.5
+                           by JL Enterprises, 1996
+
+
+***********************
+***  Opening Words  ***
+***********************
+If you're just dying to get started using this editor, then go ahead--you
+can read this file later.  However, you should completely read through this
+file if you later have any questions.  Specifically, the "Comments/Common
+Problems" section contains information about non-intuitive problems you
+might find.
+
+
+**********************
+***  Introduction  ***
+**********************
+XCOMII is an ingenious game by Microprose that does not take much time at all
+to master.  The game itself, however, sometimes becomes difficult because you
+must manage your resources carefully.  This simple little program allows you
+to edit various items stored in the saved game files created by UFO, such as
+your total money, the various items in your storehouses, the types of
+buildings you have on your different bases, and also the statistics of any
+soldier that you have recruited.
+
+
+
+********************************
+***  Description of Options  ***
+********************************
+MONEY EDITOR -- The money editing option is fairly simple and merely gives
+you whatever dollar amount you enter.  Note that it is not really recommended
+that you enter a value that is too significantly higher than the "lots"
+button as when you get paid again in the game, your dollar amount will
+wrap around to 0.  If this happens, you can always use the editor again.
+
+INVENTORY EDITOR -- The inventory option allows you to modify the amount
+of any particular item you have in the storehouses at any particular base.
+Be warned that the editor allows you to modify your game so that you have
+more items than you have space for.  The only problem with this is that if
+you move an item from your stores into a ship, you will not be able to move
+it back unless you use the editor and decrease the amount of items you have
+so that the total space used can be stored within your storehouses.
+
+BUILDING EDITOR -- One might ask why you'd need to create buildings when you
+can do that in the game.  Well, for one thing, it won't require any money to
+create buildings inside my editor.  When you create a building, you are
+prompted for the number of days until its constuction is complete.  Usually
+there is no reason why "0" (immediate construction) cannot be used, however
+at least a couple of the structures require the game to actually "see" the
+completion of the building for it to become functional, and so it may be
+necessary for "1" day of construction be specified.  The "Details" button
+allows you to modify some of the costs and values that the game uses during
+play, including its construction cost, regular maintenance costs, normal
+construction time (if built completely within the game), the building's
+defense value, and the chances of the building getting hit by aliens.  Note
+that these building details relate to ALL buildings of that TYPE in that
+saved game.
+
+SOLDIER EDITOR -- The soldier editor option is especially useful because
+you can greatly improve the accuracy of your soldiers and can even put any
+type of armour available in the game on your men.  You can promote your
+soldiers to any rank, reanimate dead soldiers, and even do immediate (and
+free) transfers to your other bases.  Version 1.1 of the editor introduced
+the ability to edit the names of your characters to whatever you like.
+Version 1.2 added the ability to do an mass editing of many soldiers at
+once.  When you choose this option, any changes that you make at the next
+screen will be applied to all soldiers at all of the checked bases.  Version
+1.5 reimplemented the code to allow transferring of soldiers between bases.
+
+SOLDIER IMPORT -- A soldier import function allows you to bring your
+characters from an old XCOM I game into any XCOM II game.  This feature was
+added in version 1.1 of the editor and allows players with well-seasoned
+characters to continue right where they left off!  Unfortunately, since I
+cannot identify all aspects of the saved game file, not everything converts
+correctly.  For instance, the image which represents your character during
+battle will most likely be incorrect.  Most of the stats, however, should
+be brought over okay, though.
+
+OBJECT EDITOR -- Another function of this editor is to allow you to edit
+the strengths and aspects of the weapons and ammo used in the game itself.
+With this option, you can modify any weapon so that it does not require any
+ammo at all, takes no time to shoot it, has greater than 100% accuracy, and
+is extremely explosive, or whatever you like.  Be warned that these changes
+do not apply specifically to any saved game, but to the entire game itself,
+which is why the option for this editor appears on the main editor screen.
+Also, be warned that the changes you make to weapons will also affect the
+weapons of the aliens.  This can be both good and bad, so be aware of which
+weapons you and the aliens can possess.
+
+BACKUP/RESTORE -- One of the nicest features of this editor is that as of
+version 1.2, it now has options to make an emergency backup a your saved
+game by running PKZIP (that already must be in your DOS path statement).
+This allows you to easily revert back to a previous copy of the game should
+you make significant changes that negatively affect your saved game.
+Remember, this editor is not warranted to always be able to perform as
+expected.  I have tried to throughly test it on my system with my version
+of the game, yet it may not work with other releases that Microprose may
+release.  I seriously recommend that you make a backup of each game you
+modify when you first use this editor.
+
+INCREASED KNOWLEDGE -- Version 1.3 also adds a button which will increase
+your knowledge in the game by giving you credit for researching all items
+that you can in the game, giving you access to all entries in the game's
+Ufopedia, and the ability of your engineers to produce all items the game
+normally allows.  Due to the complexity of the research trees, there is no
+capability in the editor to allow selective advances in knowledge, nor are
+there any plans to allow this.
+
+TACTICAL EDITOR -- The tactical editor can be easily argued to be one of the
+most powerful features of this entire editor.  It allows you to modify the
+health, energy, time units, and several other fields for all of the soldiers
+and aliens while you have landed at a site.  Version 1.5 of the editor
+greatly enhanced this editor by allowing you to affect the max values of
+each of the stats, as well as adding the ability to edit many other stats.
+This function can also be used to resurrect killed players by simply raising
+their health.  By editing the shok value to a lower value, you can revive
+an unconscious character.  You can also modify the armour and fatal wounds
+of a character to reduce a player's chances of dying.
+
+ALIEN CONTAINMENT EDITOR -- This editor was added in version 1.5 and allows
+you to modify the types of aliens that you have in your alien containment
+units at each of your bases (note that the editor allows you to have aliens
+in storage even though you may not have any in the game).  The editor also
+allows you to have captured alien type/rank combinations that are impossible
+to actually have in the game.  You should try to avoid doing this because
+the game does not have any database information on these aliens and
+researching them will not yield anything.
+
+SUBMARINE EDITOR -- Version 1.5 of the editor added the capability of
+modifying the weapons, fuel, and stores that you have on your submarines.
+As with the inventory editor, the editor does no intentional checking of
+whether you can actually store as many things as you specify.
+
+
+**********************
+***  Installation  ***
+**********************
+This editor was originally written with the use of a VGA monitor in mind,
+however, I've taken care to write my routines so that they should run on
+even a monochrome monitor (although the lowest monitor that I was able to
+test this program on was a CGA).  You will also require at least enought
+space on your hard drive to place the exe file of the editor in your main
+XCOM2 directory.  Also, a mouse is absolutely required to use the editor
+at all and there does not seem to be any change in this requirement in
+any future versions.
+
+
+**********************************
+***  Comments/Common Problems  ***
+**********************************
+ADVANCED EDITING -- The object editor and tactical editors both have an
+advanced editing button as of version 1.5 of the editor.  This button allows
+you to modify/view some of the fields that have not been fully tested or
+verified.  If you want to experiment with these values, feel free, but be
+cautioned that your changes may actually corrupt your game and cause XCOM2
+to crash if you enter certain values.  If you notice a correlation in any
+of the unknown fields or find something that is labelled incorrectly, then
+please notify me!  It will help me add additional functionality to future
+versions of the editor.
+
+BUILDING EDITOR -- Some of the buildings in the game require completion of
+construction to actually be "seen" by the game.  This means that if you
+create buildings with "0" construction time, the building may not actually
+have any effect in the game.  Therefore, if you notice that your defences
+aren't working, try recreating them in the editor with "1" day of building
+time and TFTD should see it and make it active 24 game-hours later.
+
+BUILDING EDITOR -- The Details button in the Buildings Editor affects ALL
+buildings of that TYPE in that saved game, NOT just for a particular base
+or a structure in a base.  Note also that the "Increased Knowledge" button
+will reset any changes you've made in the "Building Details" editor.
+
+OBJECT EDITOR -- Keep in mind that the object editor modifies the OBDATA.DAT
+file which is stored in the GEODATA directory where your XCOM game is
+located.  This means that if you're playing the CD version of the game, you
+will not be able to use these two portions of the editor.  I have been
+informed by a user that you can install the game completely on your hard
+drive and then run the editor from that directory without any problems.  To
+do this, run the INSTALL file on the CD under the directory HARDDISK.  It
+only takes 20 MB of hard disk space.
+
+OBJECT EDITOR -- Values for some of the weapons in the object editor are
+actually hard coded into the XCOM2 executables and thus cannot be changed
+very easily.  Therefore you may notice that the game will ignore the changes
+you make to some of the weapons.  If you discover this, your only choice is
+to try your changes on another weapon and use that weapon in the game.
+
+OBJECT EDITOR -- I've been told that the object editor seems to work with the
+original XCOM, although I haven't tried it myself.  Most of the other parts of
+the editor probably aren't as compatible with the original, though.  I've you
+are looking for a good XCOM/UFO editor, I actually did write one, which later
+evolved into XCOM2EDI.  This original version can still be found on my FTP
+site and on my web page.
+
+TACTICAL EDITOR -- Many of the stats in the tactical editor should not be
+taken above 180 (the game's actual maximum) or else some of your other stats
+will begin to decrease very rapidly.
+
+TACTICAL EDITOR -- If any of your soldiers die while in battle, you can
+resurrect them in the tactical editor by raising their health.  Unfortunately,
+the game is still able to remember the fact that your soldier died.  This
+means that when you complete the battle, the game will remove that soldier
+from your roster even if he/she is still alive.  The only way that I know to
+get around this is to go select that soldier in the tactical editor, hit
+the advanced button, and change the unitnum value to 255 (you can hit the max
+button to do this).  This essentially "dissociates" the soldier and prevents
+the game from removing it from your roster.  All record of that soldier going
+on that mission will not be saved (ie: # of kills, # of missions, etc).
+
+TACTICAL EDITOR -- Do not edit the strength of your soldiers so that it is
+over 50.  Doing so will cause your soldiers to be unable to throw projectile
+items such as grenades.
+
+
+
+**********************
+***  Revision Log  ***
+**********************
+1.0 - initial release
+1.1 - added soldier import function and the weapon and ammo editors.
+      fixed a bug in the soldier editor that would unintentionally move
+      many of your soldiers to other bases.  added ability to edit the
+      names of your soldiers.
+1.2 - fixed a bug in the bravery editing of the soldier editor.  added
+      pkzip/pkunzip buttons to make and restore backups of your saved
+      games.  a couple of other internal memory allocation problems fixed.
+      (this was not a widely distributed version)
+1.3 - made many of the error messages more informative.  revised documention
+      significantly.  made the registration procedure more tolerant of
+      upper/lower case letters and symbols in your name and phone numbers.
+      added button to increase your knowledge, edit multiple soldiers in
+      the soldier editor, and shortcut to quickly finish any building with
+      the right mouse button.
+1.4 - very minor changes in this version.  the maximum button has been
+      replaced with a lots button, which defaults to 180 when editing
+      soldier attributes.  the mouse routines have been modified slightly
+      so that if Windows is detected, the graphical mouse cursor is disabled
+      and will instead use the mouse cursor generated by the mouse driver,
+      which eliminates problems encountered when running the editor in a
+      windowed DOS box.  the tactical editor now puts checkmarks next to
+      enemy units so that they may be distinguished more easily.
+1.5 - Many new changes.  The weapon and ammo editors have been combined and
+      additional functionality added to create a new object editor.  The
+      soldier editor can now transfer soldiers again (this function was
+      disabled because it wasn't working reliably).  Several of the editors
+      have been revised to eliminate the need to click an 'edit' button after
+      selecting the item or value to change.  The tactical editor has been
+      greatly improved by adding ability to edit additional fields, making
+      its changes affect more than one turn.  A new alien containment editor
+      has been added to allow you to add/delete aliens in your containment
+      buildings.  Documentation cleaned up significantly.  Editor will now
+      look in the directory it is located in (not the current) for its
+      registration file.  Building editor now allows creation of buildings
+      with specific construction times.  A "Details" button added to Building
+      Editor to allow modification of construction costs, etc.
+
+
+
+**********************
+***  Distribution  ***
+**********************
+First of all, this program is distributed only through Shareware means, which
+means that it depends upon others to upload it to any appropriate on-line
+service that maintains collections of similar programs.  You are encouraged
+to do this, however this editor must be distributed without any modifications
+to the program itself and with all of files that you originally received with
+it.  Furthermore, any disassembling, modification, reverse-engineering,
+distribution of registration key files, serial numbers, or programs that
+attempt to defeat the registration of this program, or any other activities
+that might possibly deny the author of this saved game editor of any
+registration fees is forbidden and strongly discouraged.
+
+Second, the usage of this program is not free.  I require that if you use
+this program more than once, you should register.  Registration only costs
+US $5 and will remove the 'enter the number' prompt upon startup and will
+also display that the program is registered to you--to give you something
+to be proud of.  Additionally, as of version 1.3, all new functions will
+not be available until your register.
+
+Third, if you find a version of this editor that appears to be tampered with
+(virus infection, missing/corrupted documentation, etc), it is recommended
+that you try to obtain a version directly from me (see the bottom of this
+file for details).  You should additionally try to contact the maintainer
+of the archive where you obtained it from (or contact me and I'll try to).
+
+
+
+**********************
+***  Registration  ***
+**********************
+To register, simply send US $5 (preferably a personal check) along with
+your name, and telephone number.  Note that those three things are required.
+The phone number is especially important because it is used in generating
+the serial number.  Please do not forget to include it!
+
+Additionally, if you have an e-mail address, please include it, otherwise
+you must include a self-addressed stamped envelope.
+
+Please make sure that all personal checks are made to JEFF LAWSON.  Any
+checks made to JL Enterprises CANNOT be accepted.  Although you can send cash
+to me and I will accept it, I do not recommend it because of the risk of it
+getting intercepted by any of the many hands that mail must pass through.
+
+
+
+*********************************
+***  How to reach the author  ***
+*********************************
+I can reached via Snail-mail at:
+
+        Jeff Lawson
+        1893 Kaweah Drive
+        Pasadena, CA 91105-2174
+        USA
+
+or through E-mail at:
+
+        jlawson@hmc.edu    or    JeffLawson@aol.com
+
+also via phone at:
+
+        (213) 258-4264     or    (213) 258-5604
+
+The latest version of this program should always be available from my home
+page at "http://members.aol.com/JeffLawson/"
