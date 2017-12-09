@@ -9,8 +9,7 @@ LIBNAME = tui.lib
 
 # define all object files that make up the executable
 OBJS = screen.obj mouse.obj button.obj menubox.obj textbox.obj txtinput.obj \
-       checkbox.obj dropdown.obj rkmathd.obj rkrd.obj rkvald.obj stealth.obj \
-       pulldown.obj
+       checkbox.obj dropdown.obj pulldown.obj
 
 ##############################################################################
 
