@@ -1,5 +1,5 @@
                        X-COM II Saved Game editor, v1.5
-                           by JL Enterprises, 1996
+                           by Jeff Lawson, 1996
 
 
 ***********************
@@ -260,67 +260,33 @@ items such as grenades.
 **********************
 ***  Distribution  ***
 **********************
-First of all, this program is distributed only through Shareware means, which
-means that it depends upon others to upload it to any appropriate on-line
-service that maintains collections of similar programs.  You are encouraged
-to do this, however this editor must be distributed without any modifications
-to the program itself and with all of files that you originally received with
-it.  Furthermore, any disassembling, modification, reverse-engineering,
-distribution of registration key files, serial numbers, or programs that
-attempt to defeat the registration of this program, or any other activities
-that might possibly deny the author of this saved game editor of any
-registration fees is forbidden and strongly discouraged.
-
-Second, the usage of this program is not free.  I require that if you use
-this program more than once, you should register.  Registration only costs
-US $5 and will remove the 'enter the number' prompt upon startup and will
-also display that the program is registered to you--to give you something
-to be proud of.  Additionally, as of version 1.3, all new functions will
-not be available until your register.
-
-Third, if you find a version of this editor that appears to be tampered with
-(virus infection, missing/corrupted documentation, etc), it is recommended
-that you try to obtain a version directly from me (see the bottom of this
-file for details).  You should additionally try to contact the maintainer
-of the archive where you obtained it from (or contact me and I'll try to).
+This program and its source code is distributed under the terms of a BSD-style
+license. Please see the separate LICENSE file for specifics.
 
 
 
 **********************
 ***  Registration  ***
 **********************
-To register, simply send US $5 (preferably a personal check) along with
-your name, and telephone number.  Note that those three things are required.
-The phone number is especially important because it is used in generating
-the serial number.  Please do not forget to include it!
+Shareware Registrations are no longer being accepted for XCOM2EDI as of
+April 1999. However, since I have heard many people indicate how they still
+believe that my editor is a viable program, I am providing the registration
+information to fully unlock all of its features below. Please note that you
+must type in the information exactly as shown below! YOU CANNOT ENTER YOUR
+OWN NAME AND PHONE NUMBER!
 
-Additionally, if you have an e-mail address, please include it, otherwise
-you must include a self-addressed stamped envelope.
-
-Please make sure that all personal checks are made to JEFF LAWSON.  Any
-checks made to JL Enterprises CANNOT be accepted.  Although you can send cash
-to me and I will accept it, I do not recommend it because of the risk of it
-getting intercepted by any of the many hands that mail must pass through.
-
+Name: Registered User
+Phone: 1234567890
+Serial: 0M40J83E4JRR1ANHEAY2
 
 
 *********************************
 ***  How to reach the author  ***
 *********************************
-I can reached via Snail-mail at:
+I can reached by E-mail at:
 
-        Jeff Lawson
-        1893 Kaweah Drive
-        Pasadena, CA 91105-2174
-        USA
+        jeff@bovine.net
 
-or through E-mail at:
+The latest version of this program and its source code should be available
+from github at https://github.com/bovine/xcom2edi
 
-        jlawson@hmc.edu    or    JeffLawson@aol.com
-
-also via phone at:
-
-        (213) 258-4264     or    (213) 258-5604
-
-The latest version of this program should always be available from my home
-page at "http://members.aol.com/JeffLawson/"
