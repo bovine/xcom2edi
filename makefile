@@ -1,11 +1,8 @@
 # makefile MAKE V2.0 or higher
 .autodepend
 
-# to enable debugging information, set "DEBUG" to "yes" (will disable CRC)
+# to enable debugging information, set "DEBUG" to "yes"
 DEBUG = no
-
-# to enable Shareware annoyances/registration set "SHAREWARE" to "yes"
-SHAREWARE = yes
 
 # if this is a beta test version, set "BETAVER" to "yes"
 BETAVER = no
@@ -13,8 +10,6 @@ BETAVER = no
 # to create a distribution zip, set to "BUILDZIP" to "yes"
 BUILDZIP = yes
 
-# for zip encryption, set "ZIPWORD" to desired password, else leave blank
-#ZIPWORD = drinkmilk
 
 # set these to the version number
 VERMAJ = 1
@@ -33,9 +28,6 @@ OBJS = editor1.obj editor2.obj editor3.obj editor4.obj editor5.obj \
 BCC_ARGS = /v /ml /c /2 /Os /DVERSION="$(VERMAJ).$(VERMIN)"
 TLINK_ARGS = /x
 
-!if ($(ZIPWORD)x != x)
-ZIPWORD = /s$(ZIPWORD)
-!endif
 
 !if ($(BETAVER) == yes)
 BCC_ARGS = $(BCC_ARGS) /DDEBUG
@@ -47,12 +39,7 @@ build: xcom2edi.exe
 build: xcom2e$(VERMAJ)$(VERMIN).zip
 !endif
 
-!if ($(SHAREWARE) != yes)
-BCC_ARGS = $(BCC_ARGS) /DNO_SHAREWARE
-!endif
-
 !if ($(DEBUG) == yes)
-BCC_ARGS = $(BCC_ARGS) /DNO_CRC_CHECK
 TLINK_ARGS = $(TLINK_ARGS) /v
 !endif
 
@@ -72,7 +59,7 @@ xcom2e$(VERMAJ)$(VERMIN).zip:   xcom2edi.exe file_id.diz xcom2edi.txt
                     fd file_id.diz /d /t$(VERMAJ):$(VERMIN)0
                     fd xcom2edi.txt /d /t$(VERMAJ):$(VERMIN)0
                     fd xcom2edi.exe /d /t$(VERMAJ):$(VERMIN)0
-                    pkzip $< xcom2edi.exe xcom2edi.txt file_id.diz /ex /! $(ZIPWORD)
+                    pkzip $< xcom2edi.exe xcom2edi.txt file_id.diz /ex
                     @if exist ~banner~.* del ~banner~.*
                     @echo.>~banner~.000
                     @copy ~banner~.000+file_id.diz ~banner~.001

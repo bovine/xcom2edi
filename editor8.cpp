@@ -87,7 +87,6 @@ void submarine_editor(int savedgame)
     // []------------------[]
     activescreenclass->drawrepeat('°', 80*25, 1, 1, COLOR(LIGHT_WHITE, LIGHT_BLUE));
     activescreenclass->refresh();
-    if (!registered) unregistered_warning();
 
 
     // []----------------------------[]
@@ -251,14 +250,10 @@ void submarine_editor(int savedgame)
     // |  see if we should save the changes  |
     // []-----------------------------------[]
     if (modified) {
-        if (registered) {
-            if (ask_yes_no("\nDo you wish to save these changes?\n")) {
-                if ((fp = fopen(filename, "wb")) == NULL) file_error();
-                fwrite(submarine, sizeof(struct craft), totalcrafts, fp);
-                fclose(fp);
-            }
-        } else {
-            registered_only();
+        if (ask_yes_no("\nDo you wish to save these changes?\n")) {
+            if ((fp = fopen(filename, "wb")) == NULL) file_error();
+            fwrite(submarine, sizeof(struct craft), totalcrafts, fp);
+            fclose(fp);
         }
     }
 

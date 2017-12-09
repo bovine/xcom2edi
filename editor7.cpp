@@ -59,7 +59,6 @@ void edit_diplomacy(int savedgame)
     // []------------------[]
     activescreenclass->drawrepeat('°', 80*25, 1, 1, COLOR(LIGHT_WHITE, LIGHT_BLUE));
     activescreenclass->refresh();
-    if (!registered) unregistered_warning();
 
 
     // []----------------------------[]

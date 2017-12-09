@@ -93,13 +93,6 @@ extern void weapon_error (void);
 extern void memory_corrupt(void);
 
 
-// SHAREWAR.CPP
-extern char registered;
-extern void shareware_annoyance(void);
-extern void registered_only(void);
-extern void unregistered_warning(void);
-
-
 // EDITOR1.CPP
 #define TOTAL_BUILDINGS 18
 extern char building_names[][19];

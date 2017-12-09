@@ -104,25 +104,10 @@ static int select_base(void);
 #pragma argsused
 void main (int argc, char *argv[])
 {
-    // do internal checksum
-    #if !defined(NO_CRC_CHECK)
-        FILE *fp;
-        filecrc crc;
-        if ((fp = fopen(argv[0], "rb")) == NULL) bad_crc();
-        fseek(fp, 0x23, SEEK_SET); fread(&crc, sizeof(filecrc), 1, fp); fclose(fp);
-        if (stealth_file_check(argv[0], crc)) bad_crc();
-    #endif
-
     // make sure that there are saved games here
     check_saved_games();
 
-    // run the shareware annoyance
     activescreenclass->registerfarewell(Farewell);
-    #if !defined(NO_SHAREWARE)
-        shareware_annoyance();
-    #else
-        registered = TRUE;
-    #endif
 
     // main loop
     while (TRUE) {
@@ -182,31 +167,27 @@ void main (int argc, char *argv[])
                     break;
                     }
                 case 8: // know all
-                    if (registered) {
-                        activemouseclass->setcursor(MOUSE_WAIT);
-                        FILE *fp;
-                        char filename[25];
-                        sprintf(filename, "GAME_%i\\FACIL.DAT", savedgame_number);
-                        if ((fp = fopen(filename, "wb")) == NULL) file_error();
-                        fwrite(FacilDat, sizeof(char), 272, fp);
-                        fclose(fp);
-                        sprintf(filename, "GAME_%i\\PRODUCT.DAT", savedgame_number);
-                        if ((fp = fopen(filename, "wb")) == NULL) file_error();
-                        fwrite(ProductDat, sizeof(char), 774, fp);
-                        fclose(fp);
-                        sprintf(filename, "GAME_%i\\RESEARCH.DAT", savedgame_number);
-                        if ((fp = fopen(filename, "wb")) == NULL) file_error();
-                        fwrite(ResearchDat, sizeof(char), 2068, fp);
-                        fclose(fp);
-                        sprintf(filename, "GAME_%i\\UP.DAT", savedgame_number);
-                        if ((fp = fopen(filename, "wb")) == NULL) file_error();
-                        fwrite(UpDat, sizeof(char), 1464, fp);
-                        fclose(fp);
-                        activemouseclass->setcursor(MOUSE_ARROW);
-                        ok_box("\nChanges successfully made.\n");
-                    } else {
-                        registered_only();
-                    }
+                    activemouseclass->setcursor(MOUSE_WAIT);
+                    FILE *fp;
+                    char filename[25];
+                    sprintf(filename, "GAME_%i\\FACIL.DAT", savedgame_number);
+                    if ((fp = fopen(filename, "wb")) == NULL) file_error();
+                    fwrite(FacilDat, sizeof(char), 272, fp);
+                    fclose(fp);
+                    sprintf(filename, "GAME_%i\\PRODUCT.DAT", savedgame_number);
+                    if ((fp = fopen(filename, "wb")) == NULL) file_error();
+                    fwrite(ProductDat, sizeof(char), 774, fp);
+                    fclose(fp);
+                    sprintf(filename, "GAME_%i\\RESEARCH.DAT", savedgame_number);
+                    if ((fp = fopen(filename, "wb")) == NULL) file_error();
+                    fwrite(ResearchDat, sizeof(char), 2068, fp);
+                    fclose(fp);
+                    sprintf(filename, "GAME_%i\\UP.DAT", savedgame_number);
+                    if ((fp = fopen(filename, "wb")) == NULL) file_error();
+                    fwrite(UpDat, sizeof(char), 1464, fp);
+                    fclose(fp);
+                    activemouseclass->setcursor(MOUSE_ARROW);
+                    ok_box("\nChanges successfully made.\n");
                     break;
                 case 9: // tactical editor
                     tactical_editor(savedgame_number);

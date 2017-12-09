@@ -423,39 +423,35 @@ void edit_soldiers(int savedgame)
             int rank, location, armour, missions, kills, recovery, \
                 timeunits, stamina, health, bravery, reactions, firing, \
                 throwing, strength, mcskill, mcstrength;
-            if (!registered) unregistered_warning();
             edit_all_soldiers(rank, location, armour, missions, kills, \
                 recovery, timeunits, stamina, health, bravery, reactions, \
                 firing, throwing, strength, mcskill, mcstrength);
-            if (registered) {
-                for (i = 0; i < 250; i++) {
-                    if (!soldiers[i].name[0]) continue;
-                    for (j = 0; j < numbases; j++) {
-                        if (soldiers[i].location == baselisting[j].location && base_box[j]->checked) {
-                            if (rank != -1) soldiers[i].rank = rank - 1;
-                            if (location != -1) soldiers[i].location = baselisting[location].location;
-                            if (armour != -1) soldiers[i].armour = armour;
-                            if (missions != -1) soldiers[i].missions = missions;
-                            if (kills != -1) soldiers[i].kills = kills;
-                            if (recovery != -1) soldiers[i].recovery = recovery;
-                            if (timeunits != -1) soldiers[i].time = timeunits;
-                            if (stamina != -1) soldiers[i].stamina = stamina;
-                            if (health != -1) soldiers[i].health = health;
-                            if (bravery != -1) soldiers[i].bravery = 11 - bravery / 10;
-                            if (reactions != -1) soldiers[i].reactions = reactions;
-                            if (firing != -1) soldiers[i].firing = firing;
-                            if (throwing != -1) soldiers[i].throwing = throwing;
-                            if (strength != -1) soldiers[i].strength = strength;
-                            if (mcskill != -1) soldiers[i].mcskill = mcskill;
-                            if (mcstrength != -1) soldiers[i].mcstrength = mcstrength;
-                            break;
-                        }
+
+            for (i = 0; i < 250; i++) {
+                if (!soldiers[i].name[0]) continue;
+                for (j = 0; j < numbases; j++) {
+                    if (soldiers[i].location == baselisting[j].location && base_box[j]->checked) {
+                        if (rank != -1) soldiers[i].rank = rank - 1;
+                        if (location != -1) soldiers[i].location = baselisting[location].location;
+                        if (armour != -1) soldiers[i].armour = armour;
+                        if (missions != -1) soldiers[i].missions = missions;
+                        if (kills != -1) soldiers[i].kills = kills;
+                        if (recovery != -1) soldiers[i].recovery = recovery;
+                        if (timeunits != -1) soldiers[i].time = timeunits;
+                        if (stamina != -1) soldiers[i].stamina = stamina;
+                        if (health != -1) soldiers[i].health = health;
+                        if (bravery != -1) soldiers[i].bravery = 11 - bravery / 10;
+                        if (reactions != -1) soldiers[i].reactions = reactions;
+                        if (firing != -1) soldiers[i].firing = firing;
+                        if (throwing != -1) soldiers[i].throwing = throwing;
+                        if (strength != -1) soldiers[i].strength = strength;
+                        if (mcskill != -1) soldiers[i].mcskill = mcskill;
+                        if (mcstrength != -1) soldiers[i].mcstrength = mcstrength;
+                        break;
                     }
                 }
-                modified = regenerate_soldier = regenerate_list = TRUE;
-            } else {
-                registered_only();
             }
+            modified = regenerate_soldier = regenerate_list = TRUE;
         }
     }
 
