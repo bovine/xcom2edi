@@ -46,7 +46,7 @@ Here is brief list of what this powerful editor can currently do:
    dead soldiers back to life!)
 * import your characters from XCOM I and bring them directly into XCOM II!
 * ammo and weapon editors (edit the strengths, explosion types, cartridge size, etc. of the weapons and ammo used in the game)
-* built-in backups/restores of your saved games for easy recovery in case you do something that you decide you don't want to doff.
+* built-in backups/restores of your saved games for easy recovery in case you do make an edit that you decide you don't want to do.
 * quickly gain full access to the ufopedia and all knowledge of alien technology in the game!
 * tactical editor (lets you edit the health/stamina/strength/armour stengths/tu's/etc for all soldiers/enemies of save games
    made within tactical combats! Lets you easily give yourself an advantage (or disadvantage, if you want) in any battle!
