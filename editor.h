@@ -24,7 +24,6 @@
 #include "checkbox.hpp"
 #include "dropdown.hpp"
 #include "spawno.h"
-#include "stealth.h"
 #include "define.h"
 
 
