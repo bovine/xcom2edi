@@ -33,9 +33,6 @@
 // []-------------------------[]
 #define TRUE 1
 #define FALSE 0
-#define REGFILE "XCOM2EDI.REG"
-#define REGCODE "05RK4452VL"
-#define APPNAME "XCOM2EDI"
 
 
 // []----------------------[]
