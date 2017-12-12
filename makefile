@@ -77,17 +77,6 @@ $<
 $(<B).map
 noehl.lib cl.lib tui.lib spawnl.lib
 |
-!if ($(DEBUG) != yes)
-            wwpack $(<F)
-            crypt $<
-            @if exist $(<B).old del $(<B).old 
-            unp l -h $<
-            tinyprog /F /Mb "Load Checksum Error" /Ut _STEALTH /K $<
-            unp l -h $<
-            crcset $<
-!endif
-        @if exist c:\sierra\xcom2\$< del c:\sierra\xcom2\$<
-        copy $< c:\sierra\xcom2
 
 ##############################################################################
 
